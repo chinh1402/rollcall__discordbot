@@ -1,0 +1,2 @@
+1. File .env will store the token for more secure (npm i dotenv)
+2. using nodemon to run the bot

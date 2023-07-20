@@ -1,0 +1,21 @@
+appending 365 days onto the csv:
+
+const currentDate = new Date(); // give todays date
+let data = await csv().fromFile("rollcall.csv"); // get all data from csv, each row is an object
+for (let i = 0;i<365;i++) {
+    const newDate = new Date(currentDate.getTime() + (i * 24 * 60 * 60 * 1000));
+    const day = newDate.getDate(); 
+    const month = newDate.getMonth() + 1;
+    const DoW = newDate.toLocaleString('en-US', {weekday: 'short'});
+    const date = day + "/" + month;
+    data[i] = {DoW : DoW, Date: date, sP1: 0,sP2: 0}
+    // output la append cac data moi vao trong newData
+}
+let newData = new Parser({fields: ["DoW","Date", "sP1", "sP2"]}).parse(data);
+fs.writeFileSync("rollcall.csv", newData)
+       
+nodemon ./src/register-command.js
+
+<a class="c12" href="
+https://www.google.com/url?q=https://im-a-puzzle.com/share/2760b09528f25dc&amp;sa=D&amp;source=editors&amp;ust=1688577200483691&amp;usg=AOvVaw3-SzOLd_xxr1oQOM58vKs6">
+https://im-a-puzzle.com/share/2760b09528f25dc</a>
