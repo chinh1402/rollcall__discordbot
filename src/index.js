@@ -105,12 +105,6 @@ client.on('messageCreate', (message) => {
     if (message.content.includes(" gà")) {
         message.reply("🐔🐔🐔")
     }
-    if (message.content.includes("đi học") || message.content.includes("học đi")) {
-        const listdata = ["Học làm gì, về nhà oppa nuôi!", "học gì, oppa bảo xõa đi đã",
-    "nghỉ chút đi mà, nghe oppa"];
-        let index = (Math.floor(Math.random() * listdata.length));
-        message.reply(listdata[index]);
-    }
 })
 
 client.on('interactionCreate', (interaction) => {
